@@ -1,17 +1,30 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
   margin: 0;
+}
+
+#root {
+  font-family: "Bitter", serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   min-height: 100vh;
+  background-color: #4e5756;
 }
 
 h1 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 1.4rem;
+  font-weight: 600;
+  font-size: 2.2rem;
 }
 
 .input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
   border: 1px solid #333;
   border-radius: .3em;
   padding: .25rem;
@@ -19,10 +32,71 @@ h1 {
 }
 
 select {
+  font-family: inherit;
   margin-left: .5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: 1px solid #333;
+  border-radius: .3em;
+  padding: .25rem;
 }
 
 .equals {
-  font-weight: bold;
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color:black;
+  margin: 1.6rem;
+}
+
+.link:active,
+.link:hover,
+.wiki-link:active,
+.wiki-link:hover {
+color:#202020 ;
+}
+
+.wiki-link {
+  color:black;
+}
+
+.welcome {
+  font-size: 1rem;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 40%;
+  max-width: 200px;
+  padding: 2.3rem;
+}
+
+footer {
+  margin: auto 0 0;
+  display: flex;
+}
+
+.converter {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .welcome {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    padding: 3.6rem;
+  }
+
 }
