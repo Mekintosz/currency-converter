@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import CurrencyRow from "./CurrencyRow.jsx";
+import logo from "./currency_exchange.png"
 
 function App() {
   const URL = "https://open.er-api.com/v6/latest/";
@@ -62,26 +63,26 @@ function App() {
 
   return (
     <>
-      <header>
-        <img
-          className="logo"
-          src="./public/currency_exchange.svg"
-          alt="Currency Exchange Logo"
-        />
-        <p className="welcome">
-          Welcome to currency exchange rates calculator. Choose currencies you
-          want to exchange between and input amount for either. The conversion
-          amount will be calculated for you.{" "}
-          <a
-            className="wiki-link"
-            target="_blank"
-            href="https://en.wikipedia.org/wiki/ISO_4217#Active_codes_(list_one)"
-          >
-            For a list of all currencies and country codes eg. EUR, USD, CZK
-            click this sentence.
-          </a>
-        </p>
-      </header>
+     <header>
+      <img
+        className="logo"
+        src={logo}
+        alt="Currency Exchange Logo"
+      />
+      <p className="welcome">
+        Welcome to currency exchange rates calculator. Choose currencies you
+        want to exchange between and input amount for either. The conversion
+        amount will be calculated for you.{" "}
+        <a
+          className="wiki-link"
+          target="_blank"
+          href="https://en.wikipedia.org/wiki/ISO_4217#Active_codes_(list_one)"
+        >
+          For a list of all currencies and country codes eg. EUR, USD, CZK
+          click this sentence.
+        </a>
+      </p>
+    </header>
       <div className="converter">
         <h1>Convert</h1>
         <CurrencyRow
